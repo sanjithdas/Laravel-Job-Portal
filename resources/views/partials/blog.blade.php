@@ -1,0 +1,40 @@
+<div class="site-section block-15">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+            <h2>Recent Blog</h2>
+            <br><br><br>
+            <h6>Will update soon..</h6>
+          </div>
+        </div>
+
+
+        <div class="nonloop-block-15 owl-carousel">
+             
+            @foreach($posts as $post)
+           
+            <div>
+              <div class="img-border-sm mb-4">
+                <a href="{{route('post.show',[$post->id,$post->slug])}}">
+                  <img src="/jobs/uploads/logo/{{$post->image}}" alt="{{$post->title}}" class="img-fluid">
+                </a>
+              </div>
+              <h2 class="heading mb-0 h5">
+                <a href="{{route('post.show',[$post->id,$post->slug])}}">
+                  {{$post->title}}
+                </a>
+              </h2>
+              <span class="mb-3 d-block post-date"></a>{{$post->created_at->diffForHumans()}} &bullet; By <a href="#">Admin</a></span>
+              <p>{{str_limit($post->content,50)}}</p>
+            </div>
+            @endforeach
+       
+        </div>
+
+        <div class="row">
+          
+        </div>
+      </div>
+    </div>
+    
+
