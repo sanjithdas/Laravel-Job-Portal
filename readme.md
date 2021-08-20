@@ -56,7 +56,7 @@
 5.  Login Using GitHub
 
 ## Chat Application is developed using Laravel Pusher Broadcasting.
-
+(http://www.nadhammelbourne.com.au/jobs/chat)
      ## Modules
 
        1. User Authentication
